@@ -1,0 +1,33 @@
+Crear un Framework
+1. Crear las carpetas y los archivos necesarios.
+    >app    ::    Esta es la carpeta de configuracion del framework y va a contener todos os archivos necesarios para que el framework trabaje de la mejor manera.
+        >config
+            *setUp.php  ::  
+        >controller
+            *Paginas.php  ::  Contiene todas las rutas a los archivos que hacen que el framework funcione.
+        >helpers
+        >library  ::  Contiene todas las clases que configuran el framework
+            *Base.php
+            *Controller.php
+            *Core.php
+        >model
+        >view
+    *iniciador.php  ::  Se encarga de inicializar todas las clases de configuracion del framework MVC.
+
+    >public    ::    Carpeta que va a contener todos los archivos que va a configurar el usuario como las vistas y las paginas propias de la aplicacion.
+        >css
+        >img
+        >js
+    *index.php  ::  Inicializa todas las funciones creadas para el funcionamiento del framework
+
+** en cada carpeta debe haber un archivo .htacces para configurar las rutas de las paginas dentro de la aplicacion (embellecimiento y redirecciones de las paginas)
+
+Los documentos .htaccess son necesarios para configrar las reglas de redirecciones dentro de la cadena de archivos y carpetas.
+
+Notas:
+### Las clases se instancian sin paretesis = new Core
+### Los metodos se instancian con parentesis = Core->getUrl()
+### Los nombres de las clases deben comenzar en Mayuscula
+### Las clases se deben llamar igual que su archivo:
+    Ejemplo:
+        Persona.php su clase principal se debe llamar class Persona
